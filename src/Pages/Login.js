@@ -3,7 +3,7 @@ import "antd/dist/antd.min.css";
 import "../Styles/custom.css"
 import { Form, Input } from "antd"
 import { withRouter, Redirect } from "react-router-dom"
-import { APIRequest, LoginUser ,ExcelfileRead,Alluser} from "./../APIManager"
+import { APIRequest, LoginUser ,ExcelfileRead,Alluser,ForgotPassword} from "./../APIManager"
 
 
 class Login extends React.Component {
@@ -24,8 +24,7 @@ class Login extends React.Component {
 			email: this.state.username,
 			password: this.state.password
 		}
-        debugger
-     
+      
     //     APIRequest.getPostService(ExcelfileRead, inputData)
     //     .then((result) => {
     //         debugger

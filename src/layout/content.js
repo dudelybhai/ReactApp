@@ -5,6 +5,7 @@ import login from "../Pages/Login.js"
 import tableList from "../Pages/TableList.js"
 import registration from "../Pages/Registration.js"
 import { ROUTES } from "../routing/routeConstants"
+import Forgot from "../Pages/Forgotpassword"
 const { Content } = Layout
 
 class contentArea extends React.Component {
@@ -20,6 +21,7 @@ class contentArea extends React.Component {
 						<Route exact path={ROUTES.LOGIN} component={login} />
 						<Route exact path={ROUTES.TABLELIST} component={tableList} />
 						<Route exact path={ROUTES.REGISTRATION} component={registration} />
+						<Route exact path={ROUTES.FORGOTPASSWORD} component={Forgot} />
 					</Switch>
 				</Content>
 			</div>

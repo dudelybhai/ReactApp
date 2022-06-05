@@ -3,4 +3,5 @@ export const ROUTES = {
 	LOGIN: "/login",
 	TABLELIST: "/tableList",
 	REGISTRATION:"/registration",
+	FORGOTPASSWORD:"/forgotpassword",
 }

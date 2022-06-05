@@ -29,6 +29,9 @@ class LayoutArea extends React.Component {
   clkRegistration = () => {
     this.props.history.push({ pathname: ROUTES.REGISTRATION })
 	}
+  clkForgotPassword = () => {
+    this.props.history.push({ pathname: ROUTES.FORGOTPASSWORD })
+	}
 
 	render() {
 		return (
@@ -88,6 +91,7 @@ class LayoutArea extends React.Component {
 		<SubMenu key="33" title="LOGIN" className='menu-option-header' icon={<CaretDownOutlined />}>
           <Menu.Item key="34" className='menu-option-child'><a onClick={this.clkRegistration} >Registration</a></Menu.Item>
 		  <Menu.Item key="35" className='menu-option-child'><a onClick={this.clkLogin} >Login</a></Menu.Item>
+      <Menu.Item key="36" className='menu-option-child'><a onClick={this.clkForgotPassword} >Forgot Password</a></Menu.Item>
         </SubMenu>
       </Menu> 
 						</Header>
