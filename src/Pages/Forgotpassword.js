@@ -24,7 +24,7 @@ const ForgotPasswords=()=>{
    return result;
  }
  const onsave =(e)=>{
-     debugger
+    //  debugger
     let result=passwordcheck();
 if(result===true){
    let inputData1 = {
@@ -33,28 +33,28 @@ if(result===true){
 		}
            APIRequest.getPostService(ForgotPassword, inputData1)
 			.then((result) => {
-                debugger
+                // debugger
 				if (result.status === 200) {
            console.log('Logged In : ',result)
            setdata((prev)=>({ ...prev,email:" ",
            password:" ",
            confirmpassord:" "}))
            alert("Change password success")
-           
+
 				}
 			})
 			.catch((error) => {
-                debugger
+                // debugger
 			 console.log(error)
              setdata((prev)=>({ ...prev,email:" ",
              password:" ",
              confirmpassord:" "}))
              alert("incorrect mail")
-           
+
 			}, 2000)
 
 }
-    
+
  }
 return(
     <>
@@ -63,11 +63,11 @@ return(
         <div className="row">
             <div className="col">
                 <div className="banner-content">
-                    <h1 className="banner__page-title">Forgot Password</h1>                   
+                    <h1 className="banner__page-title">Forgot Password</h1>
                      <div className="breadcrumbs-section">
                         <div id="crumbs" className="breadcrumbs"><span typeof="v:Breadcrumb">
                             <a rel="v:url" property="v:title" >Home</a>
-                            </span> / <span className="current">Forgot Password</span></div>         
+                            </span> / <span className="current">Forgot Password</span></div>
                         </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@ return(
         //initialValue={data.email}
         rules={[{ required: true, message: 'Please input your email!' }]}
       >
-        <Input 
+        <Input
         style={{ borderRadius: " 25px" }}
         placeholder="Email"
         id='username'
@@ -104,7 +104,7 @@ return(
       </Form.Item>
 
       <Form.Item
-        name="password" 
+        name="password"
         rules={[
             {
                 required: true,
@@ -113,7 +113,7 @@ return(
         ]}
        // initialValue={data.password}
       >
-        <Input.Password  
+        <Input.Password
         minLength={6}
         style={{ borderRadius: " 25px" }}
         id='password'
@@ -125,7 +125,7 @@ return(
         value={data.password}/>
       </Form.Item>
       <Form.Item
-        name="confirmpassord" 
+        name="confirmpassord"
         rules={[
             {
                 required: true,
@@ -142,7 +142,7 @@ return(
         ]}
       //  initialValue={data.confirmpassord}
       >
-        <Input.Password  
+        <Input.Password
         minLength={6}
         style={{ borderRadius: " 25px" }}
         id='confirmpassord'
@@ -155,10 +155,10 @@ return(
       </Form.Item>
 
       <Form.Item >
-        <button 
+        <button
         style={{
 				backgroundColor: "#0FA6C9",
-			}} 
+			}}
          type='submit'
          className="login-form-btn"
          >
